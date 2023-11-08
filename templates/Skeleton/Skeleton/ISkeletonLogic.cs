@@ -2,5 +2,5 @@
 
 public interface ISkeletonLogic
 {
-    Task<string> GetStarsAsync(int stars, CancellationToken cancellation = default);
+    Task<string> GetStarsAsync(int count, CancellationToken cancellation = default);
 }

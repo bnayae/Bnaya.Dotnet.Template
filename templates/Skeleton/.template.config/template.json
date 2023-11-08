@@ -1,23 +1,25 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Bnaya Eshet",
-  "classifications": ["Source Generator", "Template", "C#", "CSharp", "Tool"],
-  "name": "Source Generator template",
+  "author": "AUTHOR",
+  "classifications":  ["Web", "WebAPI", "Library"],
+  "name": "TEMPLATE_NAME",
   "generatorVersions": "[1.0.0.0-*)",
-  "description": "A project template for creating a fully configured Source Code Generator.",
-  "groupIdentity": "Bnaya.SourceGenerator.Template",
+  "description": "",
+  "groupIdentity": "GIT_HUB_USER.TEMPLATE_NAME.Bnaya.Template",
   "precedence": "9800",
-  "identity": "Bnaya.SourceGenerator.Template.CSharp.8.0",
-  "shortName": "srcgen",
+  "identity": "GIT_HUB_USER.TEMPLATE_NAME.Template.CSharp.8.0",
+  "shortName": "TEMPLATE_SHORT_NAME",
+  "defaultName": "PROJECT_DEFAULT_NAME",
   "tags": {
     "language": "C#",
     "type": "project",
-    "keyword": "source-generator"
+    "keyword": "TEMPLATE_NAME"
   },
   "sourceName": "Skeleton",
   "preferNameDirectory": true,
   "guids": [
-
+    "35348B08-4755-4B4A-B45C-23957843BD04",
+    "7E1AA23C-BD1E-47CC-BE71-D9FCF81C27BC"
   ],
   "sources": [
     {
@@ -25,13 +27,110 @@
         {
           "exclude": ["./**/.vs/**", "./**/template_config/**"]
         },
+        {
+          "condition": "(DisableGitHubCI)",
+          "exclude": [
+            ".github/**.*"
+          ]
+        }
       ]
     }
   ],
   "symbols": {
+    "user": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Your GitHub user",
+      "replaces": "GIT_HUB_USER",
+      "defaultValue": "UNKNOWN"
+    },
+    "Email": {
+      "type": "parameter",
+      "dataType": "string",
+      "description": "Email for CI",
+      "replaces": "user_name@gmail.com",
+      "defaultValue": "user_name@somewhere.com"
+    },
+    "EnableGitHubCI": {
+      "type": "parameter",
+      "dataType": "bool",
+      "defaultValue": "true",
+      "description": "Set-up GitHub workflow (CI)"
+    },
+    "DisableGitHubCI": {
+      "type": "computed",
+      "value": "(!EnableGitHubCI)"
+    },
+    "FrameworkCI": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "8.0.x",
+          "description": "Target net8.0"
+        },
+        {
+          "choice": "7.0.x",
+          "description": "Target net7.0"
+        },
+        {
+          "choice": "6.0.x",
+          "description": "Target net6.0"
+        }
+      ],
+      "replaces": "6.0.x",
+      "defaultValue": "6.0.x"
+    },
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net8.0",
+          "description": "Target net8.0"
+        },
+        {
+          "choice": "net7.0",
+          "description": "Target net8.0"
+        },
+        {
+          "choice": "net6.0",
+          "description": "Target net6.0"
+        }
+      ],
+      "replaces": "net6.0",
+      "defaultValue": "net6.0"
+    },
+    "kestrelHttpsPortGenerated": {
+      "type": "generated",
+      "generator": "port",
+      "parameters": {
+        "low": 7000,
+        "high": 7300
+      }
+    },
+    "kestrelHttpPortReplacer": {
+      "type": "generated",
+      "generator": "coalesce",
+      "parameters": {
+        "sourceVariableName": "kestrelHttpPort",
+        "fallbackVariableName": "kestrelHttpPortGenerated"
+      },
+      "replaces": "5000"
+    },
+    "kestrelHttpsPortReplacer": {
+      "type": "generated",
+      "generator": "coalesce",
+      "parameters": {
+        "sourceVariableName": "kestrelHttpsPort",
+        "fallbackVariableName": "kestrelHttpsPortGenerated"
+      },
+      "replaces": "7000"
+    }
   },
   "primaryOutputs": [{ "path": "Skeleton.sln" }],
-  "defaultName": "SourceCodeGenerator",
   "postActions": [
     {
       "id": "restore",
