@@ -11,22 +11,29 @@
 ## CLI
 
 ```bash
-dotnet new TEMPLATE_SHORT_NAME -n Company.HelloWorld
-dotnet new TEMPLATE_SHORT_NAME -n Company.HelloWorld --user git-user --email someone@somewhere.com --enable-ci --version net7.0
-dotnet new TEMPLATE_SHORT_NAME -n Company.HelloWorld -u git-user -e someone@somewhere.com -ci -v  net7.0
+dotnet new install TEMPLATE_NAME
 
+dotnet new TEMPLATE_SHORT_NAME -h
+
+dotnet new TEMPLATE_SHORT_NAME -n MY_PROJECT_NAME
+dotnet new TEMPLATE_SHORT_NAME -n MY_PROJECT_NAME --user git-user --email someone@somewhere.com --enable-ci --version net7.0
+dotnet new TEMPLATE_SHORT_NAME -n MY_PROJECT_NAME -u git-user -e someone@somewhere.com -ci -v  net7.0
+
+dotnet new uninstall TEMPLATE_NAME
 ```
+
+## Generate the template
+
+Build and Install locally:
 
 ```bash
 # dotnet build --force
 dotnet pack -c Release --force -o .
-# dotnet new install . 
-dotnet new install TEMPLATE_NAME
+dotnet new install . 
+
 dotnet new TEMPLATE_SHORT_NAME -h
-dotnet new TEMPLATE_SHORT_NAME -n {name-of-the-project}
-# dotnet new uninstall {name-of-the-project}
-# dotnet new uninstall .
-dotnet new uninstall TEMPLATE_NAME
+dotnet new TEMPLATE_SHORT_NAME -n MY_PROJECT_NAME
+dotnet new uninstall .
 ```
 
 
