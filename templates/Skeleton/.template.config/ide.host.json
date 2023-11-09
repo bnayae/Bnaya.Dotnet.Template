@@ -4,5 +4,33 @@
   "icon": "ide/WebAPI.png",
   "supportsDocker": true,
   "symbolInfo": [
+    {  
+      "id":"GitHubUser",
+      "isVisible": true,
+      "persistenceScope": "templateGroup",
+      "name": {
+        "text": "GitHub User",
+        "overrideDefaultText": true
+      }
+    },
+    {  
+      "id":"Email",
+      "isVisible": true,
+      "persistenceScope": "templateGroup"
+    },
+    {  
+      "id":"EnableGitHubCI",
+      "isVisible": true,
+      "persistenceScope": "templateGroup",
+      "name": {
+        "text": "With GitHub CI/CD",
+        "overrideDefaultText": true
+      }
+    },
+    {  
+      "id":"Framework",
+      "isVisible": true,
+      "persistenceScope": "templateGroup"
+    }
   ]
 }

@@ -1,10 +1,10 @@
 # Setup
 
-- Replace TEMPLATE_NAME, TEMPLATE_SHORT_NAME,PROJECT_DEFAULT_NAME, GIT_HUB_USER, AUTOR, TEMPLATE_TITLE  with the name of your template 
+- Replace: TEMPLATE_NAME, TEMPLATE_SHORT_NAME,PROJECT_DEFAULT_NAME, GIT_HUB_USER, AUTOR, TEMPLATE_TITLE   
+  AT:
   - Bnaya.Dotnet.Template.csproj
   - templates/Skeleton/template.json
   - ReadMe.md
-- Replace AUTOR with the name of your template (templates/Skeleton/template.json)
 - Take a look at the license and change it if needed
 - Replace the Icon
 
