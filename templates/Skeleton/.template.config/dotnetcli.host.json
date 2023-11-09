@@ -1,8 +1,30 @@
 {
   "$schema": "http://json.schemastore.org/dotnetcli.host",
   "symbolInfo": {
+    "GitHubUser": {
+      "longName": "user",
+      "shortName": "u"
+    },
+    "Email": {
+      "longName": "email",
+      "shortName": "e"
+    },
+    "EnableGitHubCI": {
+      "longName": "enable-ci",
+      "shortName": "ci"
+    },
+    "FrameworkCI": {
+      "longName": "ci-version",
+      "shortName": "civ"
+    },
+    "Framework": {
+      "longName": "version",
+      "shortName": "v"
+    }
   },
   "usageExamples": [
-    "dotnet new TEMPLATE_SHORT_NAME -n {name-of-the-project}"
+    "dotnet new TEMPLATE_SHORT_NAME -n MY_PROJECT_NAME",
+    "dotnet new TEMPLATE_SHORT_NAME -n MY_PROJECT_NAME --user git-user --email someone@somewhere.com --enable-ci --version net7.0",
+    "dotnet new TEMPLATE_SHORT_NAME -n MY_PROJECT_NAME -u git-user -e someone@somewhere.com -ci -v  net7.0"
   ]
 }

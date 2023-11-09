@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "AUTHOR",
-  "classifications":  ["Web", "WebAPI", "Library"],
+  "classifications": ["Web", "WebAPI", "Library"],
   "name": "TEMPLATE_NAME",
   "generatorVersions": "[1.0.0.0-*)",
   "description": "",
@@ -29,15 +29,13 @@
         },
         {
           "condition": "(DisableGitHubCI)",
-          "exclude": [
-            ".github/**.*"
-          ]
+          "exclude": [".github/**.*"]
         }
       ]
     }
   ],
   "symbols": {
-    "user": {
+    "GitHubUser": {
       "type": "parameter",
       "dataType": "string",
       "description": "Your GitHub user",
@@ -47,7 +45,7 @@
     "Email": {
       "type": "parameter",
       "dataType": "string",
-      "description": "Email for CI",
+      "description": "Git Email for CI",
       "replaces": "user_name@gmail.com",
       "defaultValue": "user_name@somewhere.com"
     },
@@ -60,27 +58,6 @@
     "DisableGitHubCI": {
       "type": "computed",
       "value": "(!EnableGitHubCI)"
-    },
-    "FrameworkCI": {
-      "type": "parameter",
-      "description": "The target framework for the project.",
-      "datatype": "choice",
-      "choices": [
-        {
-          "choice": "8.0.x",
-          "description": "Target net8.0"
-        },
-        {
-          "choice": "7.0.x",
-          "description": "Target net7.0"
-        },
-        {
-          "choice": "6.0.x",
-          "description": "Target net6.0"
-        }
-      ],
-      "replaces": "6.0.x",
-      "defaultValue": "6.0.x"
     },
     "Framework": {
       "type": "parameter",
@@ -102,6 +79,23 @@
       ],
       "replaces": "net6.0",
       "defaultValue": "net6.0"
+    },
+    "FrameworkCI": {
+      "type": "generated",
+      "generator": "regex",
+      "dataType": "string",
+      "description": "The target framework for the CI.", 
+      "parameters": { 
+        "source": "Framework",              
+        "steps": [
+          {
+            "regex": "net(\\d\\.)(\\d)",
+            "replacement": "$1$2.x"
+          }
+        ]   
+      },
+      "replaces": "6.0.x",
+      "defaultValue": "6.0.x"
     },
     "kestrelHttpsPortGenerated": {
       "type": "generated",
