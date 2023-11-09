@@ -11,7 +11,7 @@ public static class ModuleDI
 {
     public static IServiceCollection AddLogic(this IServiceCollection services)
     {
-        services.AddSingleton<ISkeletonLogic, SkeletonLogic>();    
+        services.AddSingleton<IMyLogic, MyLogic>();    
         return services;
     }
 }

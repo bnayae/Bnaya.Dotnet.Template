@@ -1,7 +1,7 @@
 using Skeleton;
 namespace Skeleton.Tests;
 
-public class SkeletonLogicTests
+public class MyLogicTests
 {
     [Theory]
     [InlineData(2, "**")]
@@ -9,7 +9,7 @@ public class SkeletonLogicTests
     [InlineData(-3, "***")]
     public async Task GetStarsAsyncTest(int count, string expected )
     {
-        ISkeletonLogic logic = new SkeletonLogic();
+        IMyLogic logic = new MyLogic();
         string result = await logic.GetStarsAsync( count, CancellationToken.None);
         Assert.Equal(expected, result);
     }

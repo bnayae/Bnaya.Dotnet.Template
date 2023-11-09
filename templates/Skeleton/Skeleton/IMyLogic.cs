@@ -1,6 +1,6 @@
 ﻿namespace Skeleton;
 
-public interface ISkeletonLogic
+public interface IMyLogic
 {
     Task<string> GetStarsAsync(int count, CancellationToken cancellation = default);
 }

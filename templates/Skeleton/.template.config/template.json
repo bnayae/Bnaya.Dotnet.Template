@@ -97,6 +97,24 @@
       "replaces": "6.0.x",
       "defaultValue": "6.0.x"
     },
+    "SafeClassName": {
+      "type": "generated",
+      "generator": "regex",
+      "dataType": "string",
+      "description": "Take the name of the project unless it containe a '.', if so takes the name after the last dot.", 
+      "parameters": { 
+        "source": "name",              
+        "steps": [
+          {
+            "regex": ".*([\\w-]*)$",
+            "replacement": "$1Logic"
+          }
+        ]   
+      },
+      "replaces": "MyLogic",
+      "fileRename": "MyLogic",
+      "defaultValue": "6.0.x"
+    },
     "kestrelHttpsPortGenerated": {
       "type": "generated",
       "generator": "port",

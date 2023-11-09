@@ -19,7 +19,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/{count}", async (int count, ISkeletonLogic logic) =>
+app.MapGet("/{count}", async (int count, IMyLogic logic) =>
 {
     var res = await logic.GetStarsAsync(count);
     return res;

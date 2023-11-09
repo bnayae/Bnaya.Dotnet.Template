@@ -2,9 +2,9 @@
 
 using static System.Math;
 
-internal class SkeletonLogic: ISkeletonLogic
+internal class MyLogic: IMyLogic
 {
-    async Task<string> ISkeletonLogic.GetStarsAsync(int count, CancellationToken cancellation) 
+    async Task<string> IMyLogic.GetStarsAsync(int count, CancellationToken cancellation) 
     {
         int stars = Abs(count);
         TimeSpan delay = TimeSpan.FromSeconds(stars % 5);
