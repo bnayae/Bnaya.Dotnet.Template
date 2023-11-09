@@ -3,16 +3,16 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <PackageVersion>1.0.13.0</PackageVersion>
-    <PackageId>Bnaya.SourceGenerator.Template</PackageId>
-    <Title>Event Sourcing Backbone</Title>
-    <Authors>Bnaya Eshet</Authors>
-    <Copyright>Bnaya Eshet ©</Copyright>
-    <PackageCopyright>Bnaya Eshet</PackageCopyright>
+    <PackageId>TEMPLATE_NAME</PackageId>
+    <Title>TEMPLATE_TITLE</Title>
+    <Authors>AUTOR</Authors>
+    <Copyright>AUTOR ©</Copyright>
+    <PackageCopyright>AUTOR</PackageCopyright>
     <Description>Create Source Code Generation starter solution.</Description>
-    <PackageTags>Bnaya;Source;Generation;dotnet;c#;Tools;Analyzer</PackageTags>
+    <PackageTags>dotnet;c#</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
-    <PackageProjectUrl>https://github.com/bnayae/Bnaya.SourceGenerator.Template</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/bnayae/Bnaya.SourceGenerator.Template</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/GIT_HUB_USER/TEMPLATE_NAME</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/GIT_HUB_USER/TEMPLATE_NAME</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
 

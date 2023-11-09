@@ -3,6 +3,6 @@
   "symbolInfo": {
   },
   "usageExamples": [
-    "dotnet new srcgen -n Comp.MyGenerator "
+    "dotnet new TEMPLATE_SHORT_NAME -n {name-of-the-project}"
   ]
 }

@@ -1,28 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<Description>Code generator for Skeleton</Description>
-		<Configurations>Debug;Release;Gen</Configurations>
-		<IsRoslynComponent>true</IsRoslynComponent>
-		<AssemblyName>Skeleton.Abstractions</AssemblyName>
-		<Title>Builder Pattern Abstractions </Title>
+		<Configurations>Debug;Release</Configurations>
 		<PackageReadmeFile>ReadMe.md</PackageReadmeFile>
-		<!--<IncludeBuildOutput>false</IncludeBuildOutput>-->
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <None Include="..\ReadMe.md" Link="ReadMe.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="System.Collections.Immutable" Version="7.0.0" />
-	</ItemGroup>
-
-	<ItemGroup>
+	<!--<ItemGroup>
 		<PackageReference Update="Microsoft.SourceLink.GitHub" Version="1.1.1" />
+	</ItemGroup>-->
+	
+	<ItemGroup>
+		<None Include=".\ReadMe.md" Link="ReadMe.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+	
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
 	</ItemGroup>
 
 </Project>

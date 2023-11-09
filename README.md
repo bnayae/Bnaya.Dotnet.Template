@@ -1,3 +1,12 @@
+# Setup
+
+- Replace TEMPLATE_NAME, TEMPLATE_SHORT_NAME,PROJECT_DEFAULT_NAME, GIT_HUB_USER, AUTOR, TEMPLATE_TITLE  with the name of your template 
+  - Bnaya.Dotnet.Template.csproj
+  - templates/Skeleton/template.json
+- Replace AUTOR with the name of your template (templates/Skeleton/template.json)
+- Take a look at the license and change it if needed
+
+
 # Creating a custom .NET CLI template
 
 - [.NET SDK](https://github.com/dotnet/sdk/)
@@ -16,16 +25,22 @@
 # dotnet build --force
 dotnet pack -c Release --force -o .
 # dotnet new install . 
-dotnet new install Bnaya.SourceGenerator.Template
-dotnet new srcgen -h
-dotnet new srcgen -n {name-of-the-project}
+dotnet new install TEMPLATE_NAME
+dotnet new TEMPLATE_SHORT_NAME -h
+dotnet new TEMPLATE_SHORT_NAME -n {name-of-the-project}
 # dotnet new uninstall {name-of-the-project}
 # dotnet new uninstall .
-dotnet new uninstall Bnaya.SourceGenerator.Template
+dotnet new uninstall TEMPLATE_NAME
 ```
 
 ## CLI
 
 ```bash
-dotnet new ??? -n Company.HelloWorld
+dotnet new TEMPLATE_SHORT_NAME -n Company.HelloWorld
 ```
+
+## Attribution
+
+### Icon
+
+- [Templates icons created by Freepik - Flaticon](https://www.flaticon.com/free-icons/templates)
