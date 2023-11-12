@@ -5,9 +5,9 @@
     <PackageVersion>1.0.13.0</PackageVersion>
     <PackageId>TEMPLATE_NAME</PackageId>
     <Title>TEMPLATE_TITLE</Title>
-    <Authors>AUTOR</Authors>
-    <Copyright>AUTOR ©</Copyright>
-    <PackageCopyright>AUTOR</PackageCopyright>
+    <Authors>AUTHOR</Authors>
+    <Copyright>AUTHOR ©</Copyright>
+    <PackageCopyright>AUTHOR</PackageCopyright>
     <Description>Create Source Code Generation starter solution.</Description>
     <PackageTags>dotnet;c#</PackageTags>
     <PackageIcon>icon.png</PackageIcon>
